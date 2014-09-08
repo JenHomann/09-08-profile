@@ -4,4 +4,5 @@ Profile::Application.routes.draw do
   
   get "portfolio" => 'projects#display_all', as: "portfolio"
   
+  get "projects" => 'projects#index', :as => "projects"
 end
