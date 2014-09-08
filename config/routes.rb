@@ -1,7 +1,7 @@
 Profile::Application.routes.draw do
   
-  get "home" => 'pages#intro', as: "aboutme"
+  get "home" => 'pages#intro', as: "home"
   
-  get "portfolio" => 'projects#display_all'
+  get "portfolio" => 'projects#display_all', as: "portfolio"
   
 end
