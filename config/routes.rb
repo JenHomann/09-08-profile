@@ -6,5 +6,6 @@ Profile::Application.routes.draw do
   
   # cardinal routes for class_projects controller
   get "projects" => 'class_projects#index', :as => "projects"
+  get "projects/new" => 'class_projects#new', :as => "new_project"
   
 end

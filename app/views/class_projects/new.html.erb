@@ -1,0 +1,20 @@
+<h1>New Project</h1>
+
+<!-- Creates a POST request to "/users" -->
+<%= form_for @project do |p| %>
+
+  <%= p.label :name %>
+  <%= p.text_field :name %>
+  
+  <%= p.label :image %>
+  <%= p.text_field :image %>
+  
+  <%= p.label :week %>
+  <%= p.text_field :week %>
+  
+  <%= p.label :description %>
+  <%= p.text_field :description %>
+  
+  <%= p.submit %>
+
+<% end %>
