@@ -1,5 +1,11 @@
 <h1>New Project</h1>
 
+<!--runs any errors if this is rendering from an unvalidated create file -->
+<% @project.errors.full_messages.each do |msg| %>
+  <p><%= msg %></p>
+<% end %>
+
+<!--renders the form whether or not it was sent here from an unvalidated file or another route -->
 <%= form_for @project do |p| %>
 
   <%= p.label :name %>
