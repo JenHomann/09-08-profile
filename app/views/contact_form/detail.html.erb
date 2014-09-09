@@ -1,0 +1,8 @@
+<h1>This is the detail page for <%=@form.name%></h1>
+
+<p>Name: <%= @form.name %><br>
+   E-mail: <%= @form.email %><br>
+   <%= @form.comment%></p>
+   
+<%= link_to("Edit comment", edit_form_path)%>
+<%= link_to("All comments", contact_forms_path)%>

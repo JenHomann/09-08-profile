@@ -1,0 +1,7 @@
+<h1>This is the list of all entered contact forms</h1>
+
+<% @forms.each do |form| %>
+  <p><%= link_to(form.name, contact_form_path(form.id)) %> - <%= form.comment%></p>
+<% end %>
+
+<%= link_to("Portfolio", home_path) %>

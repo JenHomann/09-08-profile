@@ -1,0 +1,25 @@
+<h1>This is the edit form for <%=@form.name%>'s comment</h1>
+
+<% @form.errors.full_messages.each do |msg| %>
+  <p><%= msg %></p>
+<% end %>
+
+<%= form_for @form do |p| %>
+  <%= p.label :name %>
+  <%= p.text_field :name %>
+
+  <%= p.label :email %>
+  <%= p.text_field :email %>
+
+  <%= p.label :comment %>
+  <%= p.text_field :comment %>
+
+  <%= p.submit %>
+
+<% end %>
+
+<p>Would you like to delete <%=@form.name %>'s comment from the list? This action can not be undone.</p>
+
+<form action = "/forms/<%=@form.id%>/delete" method = "post">
+  <input type = "submit" value = "Delete">
+</form>

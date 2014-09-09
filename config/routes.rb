@@ -21,12 +21,12 @@ Profile::Application.routes.draw do
   post "links/:id/delete" => 'links#delete'
   
   #cardinal routes for contact_form
-  get "/forms"             => 'forms#index',  :as => "links"
-  get "/forms/new"         => 'forms#new',    :as => "new_form"
-  post "/forms"            => 'forms#create'
-  get "/forms/:id/edit"    => 'forms#edit',   :as => "edit_form"
-  put "/forms/:id"         => 'forms#update'
-  get "/forms/:id"         => 'forms#detail', :as => "form"
-  post "/forms/:id/delete" => 'forms#delete'
+  get "/forms"             => 'contact_form#index',  :as => "contact_forms"
+  get "/forms/new"         => 'contact_form#new',    :as => "new_form"
+  post "/forms"            => 'contact_form#create'
+  get "/forms/:id/edit"    => 'contact_form#edit',   :as => "edit_form"
+  put "/forms/:id"         => 'contact_form#update'
+  get "/forms/:id"         => 'contact_form#detail', :as => "contact_form"
+  post "/forms/:id/delete" => 'contact_form#delete'
   
 end
