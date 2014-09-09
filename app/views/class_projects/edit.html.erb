@@ -1,0 +1,24 @@
+<h1>Edit info for <%=@project.name%></h1>
+
+<%= form_for :project do |p| %>
+  <%= p.label :name %>
+  <%= p.text_field :name %>
+
+  <%= p.label :image %>
+  <%= p.text_field :image %>
+
+  <%= p.label :week %>
+  <%= p.text_field :week %>
+
+  <%= p.label :description %>
+  <%= p.text_field :description %>
+
+  <%= p.submit %>
+
+<% end %>
+
+<p>Would you like to delete <%=@project.name %> from your portfolio? This action can not be undone.</p>
+
+<form action = "/projects/<%=@project.id%>/delete" method = "post">
+  <input type = "submit" value = "Delete">
+</form>
