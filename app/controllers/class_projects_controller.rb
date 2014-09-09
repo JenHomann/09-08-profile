@@ -25,8 +25,14 @@ class ClassProjectsController < ApplicationController
 
    def update
      @project = ClassProject.find(params[:id])
-     @project.update_attributes({name: params[:project][:name], image: params[:project][:image], week: params[:project][:week], description: params[:project][:description]})
+     @project.update_attributes({name: params[:class_project][:name], image: params[:class_project][:image], week: params[:class_project][:week], description: params[:class_project][:description]})
      render "detail"
+     
+     # if @project.update_attributes
+     #   redirect_to "project"
+     # else
+     #   render "edit"
+     # end
    end
    
    def detail

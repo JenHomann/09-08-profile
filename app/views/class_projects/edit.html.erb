@@ -1,6 +1,10 @@
 <h1>Edit info for <%=@project.name%></h1>
 
-<%= form_for :project do |p| %>
+<% @project.errors.full_messages.each do |msg| %>
+  <p><%= msg %></p>
+<% end %>
+
+<%= form_for @project do |p| %>
   <%= p.label :name %>
   <%= p.text_field :name %>
 

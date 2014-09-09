@@ -7,7 +7,7 @@ Profile::Application.routes.draw do
   get "/projects/new" => 'class_projects#new', :as => "new_project"
   post "/projects" => 'class_projects#create'
   get "/projects/:id/edit" => 'class_projects#edit', :as => "edit_project"
-  post "/projects/:id/edit" => 'class_projects#update'
+  put "/projects/:id" => 'class_projects#update'
   get "projects/:id" => 'class_projects#detail', :as => "class_project"
   post "projects/:id/delete" => 'class_projects#delete'
   
@@ -16,7 +16,7 @@ Profile::Application.routes.draw do
   get "/links/new" => 'links#new', :as => "new_link"
   post "/links" => 'links#create'
   get "/links/:id/edit" => 'links#edit', :as => "edit_link"
-  post "/links/:id/edit" => 'links#update', :as => "update_link"
+  put "/links/:id" => 'links#update', :as => "update_link"
   get "links/:id" => 'links#detail', :as => "link"
   post "links/:id/delete" => 'links#delete'
   
