@@ -7,7 +7,7 @@ Profile::Application.routes.draw do
   get "/projects/new" => 'class_projects#new', :as => "new_project"
   post "/projects" => 'class_projects#create'
   get "/projects/:id/edit" => 'class_projects#edit', :as => "edit_project"
-  post "/projects/:id/edit" => 'class_projects#update', :as => "update_project"
+  post "/projects/:id/edit" => 'class_projects#update'
   get "projects/:id" => 'class_projects#detail', :as => "class_project"
   post "projects/:id/delete" => 'class_projects#delete'
   
