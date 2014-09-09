@@ -1,0 +1,15 @@
+<h1>This is the page to create a new link</h1>
+
+<%= form_for @link do |l| %>
+  <%= l.label :name%>
+  <%= l.text_field :name%>
+  
+  <%= l.label :url%>
+  <%= l.text_field :url%>
+  
+  <%= l.label :logo%>
+  <%= l.text_field :logo%>
+  
+  <%= l.submit %>
+  
+<% end %>

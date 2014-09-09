@@ -11,36 +11,13 @@ Profile::Application.routes.draw do
   get "projects/:id" => 'class_projects#detail', :as => "class_project"
   post "projects/:id/delete" => 'class_projects#delete'
   
+  #cardinal routes for links controller
+  get "/links" => 'links#index', :as => "links"
+  get "/links/new" => 'links#new', :as => "new_link"
+  post "/links" => 'links#create'
+  get "/links/:id/edit" => 'links#edit', :as => "edit_link"
+  post "/links/:id/edit" => 'links#update', :as => "update_link"
+  get "links/:id" => 'links#detail', :as => "link"
+  post "links/:id/delete" => 'links#delete'
+  
 end
-
-
-#
-# get "/plants/:id/edit" do
-#   @plant = Plant.find(params[:id])
-#
-#   erb :"plants/plant_edit"
-# end
-#
-# post "/plants/:id/update" do
-#   binding.pry
-#   @plant = Plant.find(params[:id])
-#   @plant.update_attributes({name: params[:name], fruitbearing: params[:fruitbearing]})
-#
-#   erb :"plants/plant_update"
-# end
-#
-# post "/plants/:id/delete" do
-#   @plant = Plant.find(params[:id])
-#   @plant.tips.each do |tip|
-#     tip.plants.delete(@plant)
-#   end
-#   @plant.delete
-#
-#   erb :"plants/plant_delete"
-# end
-#
-# get "/plants/:id" do
-#   @plant = Plant.find(params[:id])
-#
-#   erb :"plants/plant_detail"
-# end
