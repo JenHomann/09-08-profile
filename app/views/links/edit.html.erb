@@ -1,1 +1,25 @@
 <h1>This is the edit page for <%=@link.name%></h1>
+
+<% @link.errors.full_messages.each do |msg| %>
+  <p><%= msg %></p>
+<% end %>
+
+<%= form_for @link do |p| %>
+  <%= p.label :name %>
+  <%= p.text_field :name %>
+
+  <%= p.label :url %>
+  <%= p.text_field :url %>
+
+  <%= p.label :logo %>
+  <%= p.text_field :logo %>
+
+  <%= p.submit %>
+
+<% end %>
+
+<p>Would you like to delete <%=@link.name %> from your profile? This action can not be undone.</p>
+
+<form action = "/links/<%=@link.id%>/delete" method = "post">
+  <input type = "submit" value = "Delete">
+</form>

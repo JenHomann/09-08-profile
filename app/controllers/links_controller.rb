@@ -25,8 +25,11 @@ class LinksController < ApplicationController
 
   def update
     @link = Link.find(params[:id])
-    @link.update_attributes({name: params[:link][:name], url: params[:link][:url], logo: params[:project][:logo]})
-    render "detail"
+    if @link.update_attributes(params[:link])
+      render "detail"
+    else
+      render "edit"
+    end
   end
 
   def detail

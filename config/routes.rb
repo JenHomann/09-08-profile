@@ -16,7 +16,7 @@ Profile::Application.routes.draw do
   get "/links/new" => 'links#new', :as => "new_link"
   post "/links" => 'links#create'
   get "/links/:id/edit" => 'links#edit', :as => "edit_link"
-  put "/links/:id" => 'links#update', :as => "update_link"
+  put "/links/:id" => 'links#update'
   get "links/:id" => 'links#detail', :as => "link"
   post "links/:id/delete" => 'links#delete'
   
