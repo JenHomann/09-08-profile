@@ -20,4 +20,7 @@ Profile::Application.routes.draw do
   get "links/:id" => 'links#detail', :as => "link"
   post "links/:id/delete" => 'links#delete'
   
+  #cardinal routes for contact_form
+  
+  
 end
