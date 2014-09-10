@@ -1,0 +1,10 @@
+<h1><%= @article.title %></h1>
+<p><% if @article.draft %>
+      DRAFT
+    <% end %></p>
+
+<p><%= @article.body%></p>
+
+<%= link_to("Edit article", edit_article_path)%>
+<%= link_to("All articles", articles_path)%>
+<%= link_to("Full portfolio", class_projects_path)%>
