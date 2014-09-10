@@ -8,4 +8,14 @@ class Article < ActiveRecord::Base
     return body[0...30]
   end
   
+  def relative_length
+    if body.length < 50
+      "short"
+    elsif body.length > 300
+      "long"
+    else
+      "medium"
+    end
+  end
+
 end
