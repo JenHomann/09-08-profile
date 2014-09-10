@@ -21,7 +21,16 @@ class Article < ActiveRecord::Base
   end
   
   def self.long_posts
-    where(:relative_length => "long")
+    @articles = Article.all
+    articles_array = []
+    
+    @articles.each do |article|
+      if article.relative_length == "long"
+        articles_array << article
+      else
+      end
+      articles_array
+    end
   end
   
 end
