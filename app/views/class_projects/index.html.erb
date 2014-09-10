@@ -1,7 +1,10 @@
 <h1>Project Index</h1>
 
 <% @projects.each do |project| %>
-  <p><%= link_to(project.name, class_project_path(project.id)) %></p>
+  <p><% if project.featured %>
+        *
+      <% end %>
+    <%= link_to(" #{project.name}", class_project_path(project.id)) %></p>
 <% end %>
 
 <%= link_to("New project", new_project_path) %>
