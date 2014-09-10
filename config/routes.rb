@@ -1,5 +1,7 @@
 Profile::Application.routes.draw do
   
+  root :to => 'pages#welcome' #name is already set to "root"
+  
   get "home" => 'pages#intro', as: "home"
   
   # cardinal routes for class_projects controller
