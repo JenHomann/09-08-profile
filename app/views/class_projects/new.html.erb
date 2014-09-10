@@ -8,21 +8,27 @@
 <!--renders the form whether or not it was sent here from an unvalidated file or another route -->
 <%= form_for @project do |p| %>
 
-  <%= p.label :name %>
-  <%= p.text_field :name %>
+  <p><%= p.label :name %>
+  <%= p.text_field :name %></p>
+
+  <p><%= p.label :image %>
+  <%= p.text_field :image %></p>
+
+  <p><%= p.label :week %>
+  <%= p.text_field :week %></p>
   
-  <%= p.label :image %>
-  <%= p.text_field :image %>
+  <p><%= p.label :code_url %>
+  <%= p.text_field :code_url%></p>
   
-  <%= p.label :week %>
-  <%= p.text_field :week %>
+  <p><%= p.label :view_url %>
+  <%= p.text_field :view_url%></p>
+
+  <p><%= p.label :description %>
+  <%= p.text_field :description, size: '80x5' %></p>
   
-  <%= p.label :description %>
-  <%= p.text_field :description %>
-  
-  <%= p.label :featured %>
-  <%= p.check_box :featured%>
-  
-  <%= p.submit %>
+  <p><%= p.label :featured %>
+  <%= p.check_box :featured%></p>
+
+  <p><%= p.submit %></p>
 
 <% end %>
