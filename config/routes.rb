@@ -20,7 +20,7 @@ Profile::Application.routes.draw do
   get "links/:id"         => 'links#detail', :as => "link"
   post "links/:id/delete" => 'links#delete'
   
-  #cardinal routes for contact_form
+  #cardinal routes for contact_form controller
   get "/forms"             => 'contact_form#index',  :as => "contact_forms"
   get "/forms/new"         => 'contact_form#new',    :as => "new_form"
   post "/forms"            => 'contact_form#create'
@@ -29,4 +29,12 @@ Profile::Application.routes.draw do
   get "/forms/:id"         => 'contact_form#detail', :as => "contact_form"
   post "/forms/:id/delete" => 'contact_form#delete'
   
+  #cardinal routes for article controller
+  get "/articles"             => 'article#index',  :as => "articles"
+  get "/articles/new"         => 'article#new',    :as => "new_article"
+  post "/articles"            => 'article#create'
+  get "/articles/:id/edit"    => 'article#edit',   :as => "edit_article"
+  put "/articles/:id"         => 'article#update'
+  get "/articles/:id"         => 'article#detail', :as => "article"
+  post "/articles/:id/delete" => 'article#delete' 
 end
