@@ -2,6 +2,9 @@
 <p><% if @article.draft %>
       DRAFT
     <% end %></p>
+<p><% if @article.featured %>
+      FEATURED
+    <% end %></p>
 
 <p><%= @article.body%></p>
 
