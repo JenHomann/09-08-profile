@@ -37,4 +37,5 @@ Profile::Application.routes.draw do
   put "/articles/:id"         => 'articles#update'
   get "/articles/:id"         => 'articles#detail', :as => "article"
   post "/articles/:id/delete" => 'articles#delete' 
+  
 end

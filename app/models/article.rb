@@ -3,4 +3,9 @@ class Article < ActiveRecord::Base
   
   validates :title, :presence => true
   validates :body, :presence => true
+  
+  def excerpt
+    return body[0...30]
+  end
+  
 end
