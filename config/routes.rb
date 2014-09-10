@@ -30,11 +30,11 @@ Profile::Application.routes.draw do
   post "/forms/:id/delete" => 'contact_form#delete'
   
   #cardinal routes for article controller
-  get "/articles"             => 'article#index',  :as => "articles"
-  get "/articles/new"         => 'article#new',    :as => "new_article"
-  post "/articles"            => 'article#create'
-  get "/articles/:id/edit"    => 'article#edit',   :as => "edit_article"
-  put "/articles/:id"         => 'article#update'
-  get "/articles/:id"         => 'article#detail', :as => "article"
-  post "/articles/:id/delete" => 'article#delete' 
+  get "/articles"             => 'articles#index',  :as => "articles"
+  get "/articles/new"         => 'articles#new',    :as => "new_article"
+  post "/articles"            => 'articles#create'
+  get "/articles/:id/edit"    => 'articles#edit',   :as => "edit_article"
+  put "/articles/:id"         => 'articles#update'
+  get "/articles/:id"         => 'articles#detail', :as => "article"
+  post "/articles/:id/delete" => 'articles#delete' 
 end

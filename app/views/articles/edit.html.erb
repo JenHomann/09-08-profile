@@ -1,24 +1,24 @@
-<h1>Edit article: <%=@article.title%></h1>
+<h1>Edit article: "<%=@article.title%>"</h1>
 
 <% @article.errors.full_messages.each do |msg| %>
   <p><%= msg %></p>
 <% end %>
 
 <%= form_for @article do |p| %>
-  <%= p.label :title %>
-  <%= p.text_field :title %>
-
-  <%= p.label :body %>
-  <%= p.text_field :body %>
-
-  <%= p.label :draft %>
-  <%= p.checkbox :draft %>
-
-  <%= p.submit %>
+  <p><%= p.label :title %>
+  <%= p.text_field :title %></p>
+  
+  <p><%= p.label :body %>
+  <%= p.text_area :body, size: '80x5 '%></p>
+  
+  <p><%= p.label :draft %>
+  <%= p.check_box :draft %></p>
+  
+  <p><%= p.submit %></p>
 
 <% end %>
 
-<p>Would you like to delete <%=@article.title %> from your profile? This action can not be undone.</p>
+<p>Would you like to delete "<%=@article.title %>" from your profile? This action can not be undone.</p>
 
 <form action = "/articles/<%=@article.id%>/delete" method = "post">
   <input type = "submit" value = "Delete">

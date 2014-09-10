@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-     @article = Article.new(params[:class_project])
+     @article = Article.new(params[:article])
     
       if @article.save
         redirect_to articles_path
@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     
-    if @article.update_attributes(params[:class_project])
+    if @article.update_attributes(params[:article])
       render "detail"
     else
       render "edit"
@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
   end
   
   def detail
-    Article = Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
   
   def delete

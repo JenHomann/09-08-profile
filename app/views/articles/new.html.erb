@@ -8,15 +8,15 @@
 <!--renders the form whether or not it was sent here from an unvalidated file or another route -->
 <%= form_for @article do |p| %>
 
-  <%= p.label :title %>
-  <%= p.text_field :title %>
+  <p><%= p.label :title %>
+  <%= p.text_field :title %></p>
   
-  <%= p.label :body %>
-  <%= p.text_field :body %>
+  <p><%= p.label :body %>
+  <%= p.text_area :body, size: '80x5 '%></p>
   
-  <%= p.label :draft %>
-  <%= p.checkbox :draft %>
+  <p><%= p.label :draft %>
+  <%= p.check_box :draft %></p>
   
-  <%= p.submit %>
+  <p><%= p.submit %></p>
 
 <% end %>
