@@ -6,7 +6,9 @@
       FEATURED
     <% end %></p>
 
-<%= link_to("Awesome", awesome_page_path)%>
+<p><%= link_to("Awesome", awesome_page_path)%>: <% if @awesomes != 0 || @awesomes != nil %>
+    <%= @awesomes %>
+    <% end %></p>
 
 <p><%= @article.body%></p>
 

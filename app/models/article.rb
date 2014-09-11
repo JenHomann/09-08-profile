@@ -1,7 +1,7 @@
 class Article < ActiveRecord::Base
   attr_accessible :body, :draft, :title, :featured
   
-  has_many :awesomes
+  has_many :awesomes 
   
   validates :title, :presence => true
   validates :body, :presence => true

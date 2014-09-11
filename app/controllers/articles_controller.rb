@@ -43,6 +43,7 @@ class ArticlesController < ApplicationController
   def detail
     session[:ip_address] = request.remote_ip
     @article = Article.find(params[:id])
+    @awesomes = Awesome.where(:article_id => @article.id.to_s).length
   end
   
   # POST: loads edit view, can permanently delete the instance and row in the article table
@@ -54,7 +55,7 @@ class ArticlesController < ApplicationController
   def awesome
     @article = Article.find(params[:id])
     Awesome.create(ip_address: session[:ip_address], article_id: @article.id)
-    @awesomes = Awesome.all
+    redirect_to article_path
   end
   
 end
