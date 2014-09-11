@@ -40,6 +40,7 @@ class ArticlesController < ApplicationController
   
   # GET: show/detail view of a given instance of Article
   def detail
+    session[:ip_address] = request.remote_ip
     @article = Article.find(params[:id])
   end
   
