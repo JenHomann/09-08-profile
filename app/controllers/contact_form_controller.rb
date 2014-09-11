@@ -1,13 +1,16 @@
 class ContactFormController < ApplicationController
   
+  # GET: index view for all contact forms
   def index
    @forms = ContactForm.all
   end
   
+  # GET: new view to input data for a new contact form
    def new
     @form = ContactForm.new
   end
   
+  # POST: runs this Ruby code to createa a new instance of Contact Form, loads the index or new path based on the success of this creation
   def create
     @form = ContactForm.new(params[:contact_form])
   
@@ -19,10 +22,12 @@ class ContactFormController < ApplicationController
      end
   end
 
+  # GET: edit view to edit previously input data for a contact form
   def edit
     @form = ContactForm.find(params[:id])
   end
 
+  # PUT: runs this Ruby code to update the attributes of the given instance of Contact Form, loads the detail or edit view based on the success of this update
   def update
     @form = ContactForm.find(params[:id])
     if @form.update_attributes(params[:contact_form])
@@ -32,10 +37,12 @@ class ContactFormController < ApplicationController
     end
   end
 
+  # GET: show/detail view of a given instance of Project
   def detail
     @form = ContactForm.find(params[:id])
   end
 
+  # POST: loads edit view, can permanently delete the instance and row in the contact form table
   def delete
     ContactForm.find(params[:id]).delete
     redirect_to contact_forms_path
