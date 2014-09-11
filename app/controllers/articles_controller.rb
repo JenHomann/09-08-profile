@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
 
   # GET: index view for all articles
   def index
+    session[:ip_address] = request.remote_ip
     @articles = Article.all
   end
   
@@ -48,6 +49,12 @@ class ArticlesController < ApplicationController
   def delete
     Article.find(params[:id]).delete
     redirect_to articles_path
+  end
+  
+  def awesome
+    @article = Article.find(params[:id])
+    Awesome.create(ip_address: session[:ip_address], article_id: @article.id)
+    @awesomes = Awesome.all
   end
   
 end

@@ -6,14 +6,7 @@
       FEATURED
     <% end %></p>
 
-<%= form_for @article do |p| %>
-  
-  <p><%= p.label :likes %>
-  <%= p.check_box :likes %></p>
-  
-  <p><%= p.submit %></p>
-  
-<% end %>
+<%= link_to("Awesome", awesome_page_path)%>
 
 <p><%= @article.body%></p>
 
