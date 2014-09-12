@@ -18,10 +18,6 @@
 
 <% end %>
 
-<p>Would you like to delete <%=@link.name %> from your profile? This action can not be undone.</p>
-
-<form action = "/links/<%=@link.id%>/delete" method = "post">
-  <input type = "submit" value = "Delete">
-</form>
+<p>Would you like to delete "<%=@link.name %>" from your profile? This action can not be undone: <%= link_to 'destroy', link_path, :method => :delete, data: {confirm: 'Are you sure?' }%></p>
 
 <p><%= link_to("Home", root_path)%></p>

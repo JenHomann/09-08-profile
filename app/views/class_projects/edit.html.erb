@@ -30,10 +30,6 @@
 
 <% end %>
 
-<p>Would you like to delete <%=@project.name %> from your portfolio? This action can not be undone.</p>
-
-<form action = "/projects/<%=@project.id%>/delete" method = "post">
-  <input type = "submit" value = "Delete">
-</form>
+<p>Would you like to delete "<%=@project.name %>" from your portfolio? This action can not be undone: <%= link_to 'destroy', class_project_path, :method => :delete, data: {confirm: 'Are you sure?' }%></p>
 
 <p><%= link_to("Home", root_path)%></p>

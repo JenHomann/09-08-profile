@@ -10,8 +10,8 @@ Profile::Application.routes.draw do
   post "/projects"           => 'class_projects#create'
   get "/projects/:id/edit"   => 'class_projects#edit',   :as => "edit_project"
   put "/projects/:id"        => 'class_projects#update'
-  get "projects/:id"         => 'class_projects#detail', :as => "class_project"
-  post "projects/:id/delete" => 'class_projects#delete'
+  get "projects/:id"         => 'class_projects#show', :as => "class_project"
+  delete "projects/:id" => 'class_projects#destroy'
   
   #cardinal routes for links controller
   resources :links
@@ -21,7 +21,7 @@ Profile::Application.routes.draw do
   # get "/links/:id/edit"   => 'links#edit',   :as => "edit_link"
   # put "/links/:id"        => 'links#update'
   # get "links/:id"         => 'links#detail', :as => "link"
-  # post "links/:id/delete" => 'links#delete'
+  # post "links/:id/delete" => 'links#destroy'
   
   #cardinal routes for contact_form controller
   get "/forms"             => 'contact_form#index',  :as => "contact_forms"
@@ -30,7 +30,7 @@ Profile::Application.routes.draw do
   get "/forms/:id/edit"    => 'contact_form#edit',   :as => "edit_form"
   put "/forms/:id"         => 'contact_form#update'
   get "/forms/:id"         => 'contact_form#detail', :as => "contact_form"
-  post "/forms/:id/delete" => 'contact_form#delete'
+  delete "/forms/:id" => 'contact_form#destroy'
   
   #cardinal routes for article controller
   resources :articles
@@ -40,7 +40,7 @@ Profile::Application.routes.draw do
   # get "/articles/:id/edit"    => 'articles#edit',   :as => "edit_article"
   # put "/articles/:id"         => 'articles#update'
   # get "/articles/:id"         => 'articles#detail', :as => "article"
-  # delete "/articles/:id" => 'articles#delete'
+  # delete "/articles/:id" => 'articles#destroy'
   
   get "/articles/:id/awesome"   => 'articles#awesome', :as => "awesome_page"
   

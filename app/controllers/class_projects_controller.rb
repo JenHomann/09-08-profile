@@ -17,7 +17,7 @@ class ClassProjectsController < ApplicationController
       @project = ClassProject.new(params[:class_project])
      
        if @project.save
-         redirect_to class_projects_path
+         redirect_to class_project_path(@project.id), :notice => "You have successfully added this project."
          
        else
          render "new"
@@ -34,7 +34,7 @@ class ClassProjectsController < ApplicationController
      @project = ClassProject.find(params[:id])
      
      if @project.update_attributes(params[:class_project])
-       render "detail"
+       redirect_to class_project_path, :notice => "You hae successfully added a project."
      else
        render "edit"
      end
@@ -46,7 +46,7 @@ class ClassProjectsController < ApplicationController
    end
    
    # POST: loads edit view, can permanently delete the instance and row in the project table
-   def delete
+   def destroy
      ClassProject.find(params[:id]).delete
      redirect_to class_projects_path
    end

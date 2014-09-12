@@ -18,7 +18,7 @@ before_filter :session_id
     @link = Link.new(params[:link])
   
      if @link.save
-       redirect_to links_path
+       redirect_to links_path, :notice => "You have successfully created a new link."
      
      else
        render "new"
@@ -34,7 +34,7 @@ before_filter :session_id
   def update
     @link = Link.find(params[:id])
     if @link.update_attributes(params[:link])
-      render "detail"
+      redirect_to link_path, :notice => "You have successfully updated this link."
     else
       render "edit"
     end
@@ -46,9 +46,9 @@ before_filter :session_id
   end
 
   # POST: loads edit view, can permanently delete the instance and row in the link table
-  def delete
+  def destroy
     Link.find(params[:id]).delete
-    redirect_to links_path
+    redirect_to links_path, :notice => "You have successfully deleted this link."
   end
 
 end
