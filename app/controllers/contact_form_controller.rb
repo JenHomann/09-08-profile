@@ -47,6 +47,6 @@ class ContactFormController < ApplicationController
   # POST: loads edit view, can permanently delete the instance and row in the contact form table
   def destroy
     ContactForm.find(params[:id]).delete
-    redirect_to contact_forms_path, :notice => "You have successfully deleted this form."
+    redirect_to contact_form_index_path, :notice => "You have successfully deleted this form."
   end
 end

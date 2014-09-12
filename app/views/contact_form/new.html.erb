@@ -4,7 +4,7 @@
   <p><%= msg %></p>
 <% end %>
 
-<%= form_for @form do |f| %>
+<%= form_for @form, :url => contact_form_index_path do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   

@@ -5,13 +5,14 @@ Profile::Application.routes.draw do
   get "home" => 'pages#intro', as: "home"
   
   # cardinal routes for class_projects controller
-  get "/projects"            => 'class_projects#index',  :as => "class_projects"
-  get "/projects/new"        => 'class_projects#new',    :as => "new_project"
-  post "/projects"           => 'class_projects#create'
-  get "/projects/:id/edit"   => 'class_projects#edit',   :as => "edit_project"
-  put "/projects/:id"        => 'class_projects#update'
-  get "projects/:id"         => 'class_projects#show', :as => "class_project"
-  delete "projects/:id" => 'class_projects#destroy'
+  resources :class_projects
+  # get "/projects"            => 'class_projects#index',  :as => "class_projects"
+  # get "/projects/new"        => 'class_projects#new',    :as => "new_project"
+  # post "/projects"           => 'class_projects#create'
+  # get "/projects/:id/edit"   => 'class_projects#edit',   :as => "edit_project"
+  # put "/projects/:id"        => 'class_projects#update'
+  # get "projects/:id"         => 'class_projects#show', :as => "class_project"
+  # delete "projects/:id" => 'class_projects#destroy'
   
   #cardinal routes for links controller
   resources :links
@@ -24,13 +25,14 @@ Profile::Application.routes.draw do
   # post "links/:id/delete" => 'links#destroy'
   
   #cardinal routes for contact_form controller
-  get "/forms"             => 'contact_form#index',  :as => "contact_forms"
-  get "/forms/new"         => 'contact_form#new',    :as => "new_form"
-  post "/forms"            => 'contact_form#create'
-  get "/forms/:id/edit"    => 'contact_form#edit',   :as => "edit_form"
-  put "/forms/:id"         => 'contact_form#update'
-  get "/forms/:id"         => 'contact_form#show', :as => "contact_form"
-  delete "/forms/:id" => 'contact_form#destroy'
+  resources :contact_form
+  # get "/forms"             => 'contact_form#index',  :as => "contact_forms"
+  # get "/forms/new"         => 'contact_form#new',    :as => "new_form"
+  # post "/forms"            => 'contact_form#create'
+  # get "/forms/:id/edit"    => 'contact_form#edit',   :as => "edit_form"
+  # put "/forms/:id"         => 'contact_form#update'
+  # get "/forms/:id"         => 'contact_form#show', :as => "contact_form"
+  # delete "/forms/:id" => 'contact_form#destroy'
   
   #cardinal routes for article controller
   resources :articles
