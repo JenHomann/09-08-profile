@@ -61,7 +61,7 @@ class ArticlesController < ApplicationController
       session[:liked_article_ids] = [@article.id]    
     end
     
-    redirect_to article_path(@article.id)
+    redirect_to article_path(@article.id), :notice => "Awesomed √"
   end
   
 end

@@ -14,12 +14,12 @@ class ApplicationController < ActionController::Base
   
   def authorize
     if current_user.nil?
-      redirect_to logins_path
+      redirect_to logins_path, :alert => "You need to log in to do that."
     end
   end
   
   def session_id
     session[:ip_address] = request.remote_ip
   end
-  
+
 end
