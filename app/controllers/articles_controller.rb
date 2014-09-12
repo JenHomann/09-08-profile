@@ -1,7 +1,5 @@
 class ArticlesController < ApplicationController
-  
-before_filter :authorize, :only => [:new, :create, :edit, :update, :delete]
-before_filter :session_id
+  skip_before_filter :authorize, :only => [:index, :detail]
 
   # GET: index view for all articles
   def index

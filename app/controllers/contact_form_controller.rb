@@ -1,5 +1,7 @@
 class ContactFormController < ApplicationController
   
+  skip_before_filter :authorize, :only => [:new, :create]
+  
   # GET: index view for all contact forms
   def index
    @forms = ContactForm.all

@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  
+  before_filter :authorize
+  before_filter :session_id
 
   def current_user
     if session[:user_id]

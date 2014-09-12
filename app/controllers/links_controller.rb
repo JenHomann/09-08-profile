@@ -1,5 +1,8 @@
 class LinksController < ApplicationController
-  
+
+before_filter :authorize, :only => [:new, :create, :edit, :update, :delete]
+before_filter :session_id
+
   # GET: index view for all links
   def index
    @links = Link.all
