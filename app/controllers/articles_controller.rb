@@ -46,9 +46,9 @@ class ArticlesController < ApplicationController
   end
   
   # POST: loads edit view, can permanently delete the instance and row in the article table
-  def delete
+  def destroy
     Article.find(params[:id]).delete
-    redirect_to articles_path
+    redirect_to articles_path, :notice => "Your article has been deleted."
   end
   
   def awesome

@@ -21,6 +21,6 @@
 
 <% end %>
 
-<p>Would you like to delete "<%=@article.title %>" from your profile? This action can not be undone: <%= link_to 'Destroy', article_path, :method => :delete, data: {confirm: 'Are you sure?' }%></p>
+<p>Would you like to delete "<%=@article.title %>" from your profile? This action can not be undone: <%= link_to 'destroy', article_path, :method => :delete, data: {confirm: 'Are you sure?' }%></p>
 
 <p><%= link_to("Home", root_path)%></p>
