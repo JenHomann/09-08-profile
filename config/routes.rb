@@ -14,13 +14,14 @@ Profile::Application.routes.draw do
   post "projects/:id/delete" => 'class_projects#delete'
   
   #cardinal routes for links controller
-  get "/links"            => 'links#index',  :as => "links"
-  get "/links/new"        => 'links#new',    :as => "new_link"
-  post "/links"           => 'links#create'
-  get "/links/:id/edit"   => 'links#edit',   :as => "edit_link"
-  put "/links/:id"        => 'links#update'
-  get "links/:id"         => 'links#detail', :as => "link"
-  post "links/:id/delete" => 'links#delete'
+  resources :links
+  # get "/links"            => 'links#index',  :as => "links"
+  # get "/links/new"        => 'links#new',    :as => "new_link"
+  # post "/links"           => 'links#create'
+  # get "/links/:id/edit"   => 'links#edit',   :as => "edit_link"
+  # put "/links/:id"        => 'links#update'
+  # get "links/:id"         => 'links#detail', :as => "link"
+  # post "links/:id/delete" => 'links#delete'
   
   #cardinal routes for contact_form controller
   get "/forms"             => 'contact_form#index',  :as => "contact_forms"
@@ -32,13 +33,14 @@ Profile::Application.routes.draw do
   post "/forms/:id/delete" => 'contact_form#delete'
   
   #cardinal routes for article controller
-  get "/articles"             => 'articles#index',  :as => "articles"
-  get "/articles/new"         => 'articles#new',    :as => "new_article"
-  post "/articles"            => 'articles#create'
-  get "/articles/:id/edit"    => 'articles#edit',   :as => "edit_article"
-  put "/articles/:id"         => 'articles#update'
-  get "/articles/:id"         => 'articles#detail', :as => "article"
-  post "/articles/:id/delete" => 'articles#delete'
+  resources :articles
+  # get "/articles"             => 'articles#index',  :as => "articles"
+  # get "/articles/new"         => 'articles#new',    :as => "new_article"
+  # post "/articles"            => 'articles#create'
+  # get "/articles/:id/edit"    => 'articles#edit',   :as => "edit_article"
+  # put "/articles/:id"         => 'articles#update'
+  # get "/articles/:id"         => 'articles#detail', :as => "article"
+  # delete "/articles/:id" => 'articles#delete'
   
   get "/articles/:id/awesome"   => 'articles#awesome', :as => "awesome_page"
   

@@ -41,7 +41,7 @@ class ClassProjectsController < ApplicationController
    end
    
    # GET: show/detail view of a given instance of Project
-   def detail
+   def show
      @project = ClassProject.find(params[:id])
    end
    

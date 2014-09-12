@@ -40,7 +40,7 @@ class ArticlesController < ApplicationController
   end
   
   # GET: show/detail view of a given instance of Article
-  def detail
+  def show
     @article = Article.find(params[:id])
     @awesomes = Awesome.where(:article_id => @article.id.to_s).length
   end

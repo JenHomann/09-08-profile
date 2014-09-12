@@ -40,7 +40,7 @@ class ContactFormController < ApplicationController
   end
 
   # GET: show/detail view of a given instance of Project
-  def detail
+  def show
     @form = ContactForm.find(params[:id])
   end
 

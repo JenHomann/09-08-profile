@@ -41,7 +41,7 @@ before_filter :session_id
   end
 
   # GET: show/detail view of a given instance of link
-  def detail
+  def show
     @link = Link.find(params[:id])
   end
 
