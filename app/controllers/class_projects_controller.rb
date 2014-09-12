@@ -34,7 +34,7 @@ class ClassProjectsController < ApplicationController
      @project = ClassProject.find(params[:id])
      
      if @project.update_attributes(params[:class_project])
-       redirect_to class_project_path, :notice => "You hae successfully added a project."
+       redirect_to class_project_path(@project.id), :notice => "You hae successfully added a project."
      else
        render "edit"
      end

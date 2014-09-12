@@ -29,7 +29,7 @@ Profile::Application.routes.draw do
   post "/forms"            => 'contact_form#create'
   get "/forms/:id/edit"    => 'contact_form#edit',   :as => "edit_form"
   put "/forms/:id"         => 'contact_form#update'
-  get "/forms/:id"         => 'contact_form#detail', :as => "contact_form"
+  get "/forms/:id"         => 'contact_form#show', :as => "contact_form"
   delete "/forms/:id" => 'contact_form#destroy'
   
   #cardinal routes for article controller

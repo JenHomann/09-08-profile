@@ -17,7 +17,7 @@ class ContactFormController < ApplicationController
     @form = ContactForm.new(params[:contact_form])
   
      if @form.save
-       redirect_to contact_forms_path
+       redirect_to root_path, :notice => "Your message has been successfully sent."
      
      else
        render "new"
@@ -33,7 +33,7 @@ class ContactFormController < ApplicationController
   def update
     @form = ContactForm.find(params[:id])
     if @form.update_attributes(params[:contact_form])
-      render "detail"
+      redirect_to contact_form_path, :notice => "You have successfully updated this form's information."
     else
       render "edit"
     end
@@ -45,8 +45,8 @@ class ContactFormController < ApplicationController
   end
 
   # POST: loads edit view, can permanently delete the instance and row in the contact form table
-  def delete
+  def destroy
     ContactForm.find(params[:id]).delete
-    redirect_to contact_forms_path
+    redirect_to contact_forms_path, :notice => "You have successfully deleted this form."
   end
 end

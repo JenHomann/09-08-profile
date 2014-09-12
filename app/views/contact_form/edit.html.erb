@@ -20,8 +20,6 @@
 
 <p>Would you like to delete <%=@form.name %>'s comment from the list? This action can not be undone.</p>
 
-<form action = "/forms/<%=@form.id%>/delete" method = "post">
-  <input type = "submit" value = "Delete">
-</form>
+<p>Would you like to delete this form from your list? This action can not be undone: <%= link_to 'destroy', contact_form_path, :method => :delete, data: {confirm: 'Are you sure?' }%></p>
 
 <p><%= link_to("Home", root_path)%></p>
