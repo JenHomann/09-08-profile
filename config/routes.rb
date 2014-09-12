@@ -43,7 +43,7 @@ Profile::Application.routes.draw do
   get "/articles/:id/awesome"   => 'articles#awesome', :as => "awesome_page"
   
   #SOME of the cardinal routes for user controller
-  post "create_user" => 'users#create', as => "create_user"
+  post "create_user" => 'users#create', :as => "create_user"
   get "signup" => 'users#new', :as => "signup"
   
 end
