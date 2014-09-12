@@ -54,8 +54,15 @@ class ArticlesController < ApplicationController
   
   def awesome
     @article = Article.find(params[:id])
-    Awesome.create(ip_address: session[:ip_address], article_id: @article.id)
-    redirect_to article_path
+    @article.awesomes.create(ip_address: session[:ip_address], article_id: @article.id)
+    
+    if session[:liked_article_ids]
+      session[:liked_article_ids] << @article.id
+    else
+      session[:liked_article_ids] = [@article.id]    
+    end
+    
+    redirect_to article_path(@article.id)
   end
   
 end

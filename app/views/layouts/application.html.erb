@@ -8,7 +8,21 @@
 </head>
 <body>
   
-<% request.remote_ip%>
+<% if current_user %>
+  Logged in!
+<% else %>
+  NOT logged in!
+<% end %>
+
+<% if session[:liked_article_ids] %>
+  <p>The value of <strong><code>session[:liked_article_ids]</code></strong> is: <strong><code><%= session[:liked_article_ids] %></code></strong></p>
+<% else %>
+  <p><strong><code>session[:liked_article_ids]</code></strong> is not set yet.</p>
+<% end %>
+
+<p>Your IP address is: <%= request.remote_ip %></p>
+
+<p>Logged in? Well, the session is: <%= session %></p>
 
 <%= yield %>
 
