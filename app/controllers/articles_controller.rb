@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(params[:article])
     
     if @article.save
-      redirect_to articles_path
+      redirect_to article_path(@article.id), :notice => "Saved! Way to go."
         
     else
       render "new"
@@ -33,7 +33,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     
     if @article.update_attributes(params[:article])
-      render "detail"
+      redirect_to article_path(@article.id), :notice => "Updated! Way to go."
     else
       render "edit"
     end
