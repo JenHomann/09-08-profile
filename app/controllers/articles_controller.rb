@@ -1,26 +1,28 @@
 class ArticlesController < ApplicationController
+  
+before_filter :authorize, :only => [:new, :create, :edit, :update, :delete]
+before_filter :session_id
 
   # GET: index view for all articles
   def index
-    session[:ip_address] = request.remote_ip
     @articles = Article.all
   end
   
   # GET: new view to input data for a new article
   def new
-     @article = Article.new
+    @article = Article.new
   end
 
   # POST: runs this Ruby code to createa a new instance of Article, loads the index or new path based on the success of this creation
   def create
-     @article = Article.new(params[:article])
+    @article = Article.new(params[:article])
     
-      if @article.save
-        redirect_to articles_path
+    if @article.save
+      redirect_to articles_path
         
-      else
-        render "new"
-      end
+    else
+      render "new"
+    end
   end
   
   # GET: edit view to edit previously input data for an article
@@ -41,7 +43,6 @@ class ArticlesController < ApplicationController
   
   # GET: show/detail view of a given instance of Article
   def detail
-    session[:ip_address] = request.remote_ip
     @article = Article.find(params[:id])
     @awesomes = Awesome.where(:article_id => @article.id.to_s).length
   end
@@ -54,7 +55,7 @@ class ArticlesController < ApplicationController
   
   def awesome
     @article = Article.find(params[:id])
-    @article.awesomes.create(ip_address: session[:ip_address], article_id: @article.id)
+    @article.awesomes.create(ip_address: session_id, article_id: @article.id)
     
     if session[:liked_article_ids]
       session[:liked_article_ids] << @article.id

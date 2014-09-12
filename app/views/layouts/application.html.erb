@@ -11,7 +11,7 @@
 <% if current_user %>
   Logged in as <%= current_user.email %> <%= link_to("Log out", logout_path)%>
 <% else %>
-  NOT logged in!
+  NOT logged in! <%= link_to("Log in", logins_path)%>
 <% end %>
 
 <% if session[:liked_article_ids] %>

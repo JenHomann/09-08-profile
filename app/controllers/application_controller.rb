@@ -8,4 +8,15 @@ class ApplicationController < ActionController::Base
   end
   
   helper_method :current_user
+  
+  def authorize
+    if current_user.nil?
+      redirect_to logins_path
+    end
+  end
+  
+  def session_id
+    session[:ip_address] = request.remote_ip
+  end
+  
 end

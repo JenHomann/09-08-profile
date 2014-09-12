@@ -25,10 +25,5 @@ class LoginsController < ApplicationController
     session[:user_id] = nil #could also call 'reset_session' to clear the entire session
     redirect_to articles_path
   end
-
-  def authorize
-    if current_user.nil?
-      redirect_to login_path
-    end
-  end
+  
 end
