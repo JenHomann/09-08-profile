@@ -1,4 +1,6 @@
 class Article < ActiveRecord::Base
+  require "markdown_processor"
+  
   attr_accessible :body, :draft, :title, :featured
   
   has_many :awesomes 
@@ -33,6 +35,10 @@ class Article < ActiveRecord::Base
       end
       articles_array
     end
+  end
+  
+  def html_body
+    MarkdownProcessor.convert_to_h1(self.body)
   end
   
 end

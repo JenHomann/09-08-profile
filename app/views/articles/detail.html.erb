@@ -10,8 +10,7 @@
     <%= @awesomes %>
     <% end %></p>
 
-<p><%= simple_format (@article.body) %></p>
-
+<p><%= raw(@article.html_body) %></p>
 
 <%= link_to("Edit article", edit_article_path)%>
 <%= link_to("All articles", articles_path)%>
