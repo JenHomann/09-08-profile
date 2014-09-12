@@ -49,5 +49,6 @@ Profile::Application.routes.draw do
   #SOME of the cardinal routes for logins controller
   post "/login" => 'logins#create', :as => "create_login"
   get "/login" => 'logins#new', :as => "logins"
+  get "logout" => 'logins#destroy', :as => "logout"
   
 end

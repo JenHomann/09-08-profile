@@ -22,8 +22,8 @@ class LoginsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
-    redirect_to articles_url
+    session[:user_id] = nil #could also call 'reset_session' to clear the entire session
+    redirect_to articles_path
   end
 
   def authorize
