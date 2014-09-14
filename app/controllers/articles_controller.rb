@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  skip_before_filter :authorize, :only => [:index, :detail]
+  skip_before_filter :authorize, :only => [:index, :show]
 
   # GET: index view for all articles
   def index
