@@ -11,7 +11,7 @@ class Article < ActiveRecord::Base
   scope :is_draft, where(:draft => true)
   
   def excerpt
-    return body[0...30]
+    return body[0...200]
   end
   
   def relative_length

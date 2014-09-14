@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   # GET: index view for all articles
   def index
     @articles = Article.all
+    @most_recent = Article.last
   end
   
   # GET: new view to input data for a new article

@@ -1,13 +1,16 @@
-<h1>Articles</h1>
+<div id="featured_article">
+  <h1><%= @most_recent.title %></h1>
+  <p><%= @most_recent.body %></p>
+</div>
 
-<% @articles.each do |article| %>
-  <p><% if article.featured %>
-        *
-    <% end %>
-    <%= link_to(" #{article.title}", article_path(article.id)) %> (length: <%= article.relative_length%>)<br>
-      <%= article.excerpt %> ... <%= link_to("[more]", article_path(article.id)) %></p>
-<% end %>
-
-<%= link_to("New article", new_article_path) %>
-
-<p><%= link_to("Home", root_path)%></p>
+<div id="index">
+  <h1>More Articles</h1>
+  <% @articles.each do |article| %>
+    <p><%= link_to(" #{article.title}", article_path(article.id)) %><br>
+        <%= article.excerpt %> ... <%= link_to("[more]", article_path(article.id)) %></p>
+  <% end %>
+  
+  <% if current_user %>
+    <%= link_to("New article", new_article_path)%>
+  <% end%>
+</div>

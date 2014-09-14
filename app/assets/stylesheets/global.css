@@ -1,9 +1,9 @@
-header:before, header:after, footer:before, footer:after {
+header:before, header:after, footer:before, footer:after, #content:before, #content:after {
   content: " ";
   display: table;
 }
 
-header:after, footer:after {
+header:after, footer:after, #content:before, #content:after {
   clear: both;
 }
 
@@ -44,13 +44,23 @@ header {
 #logo {
   float: right;
   font-size: 52px;
-  margin: 10px 100px 0 0;
+  margin: 0 100px 0 0;
+  height: 80px;
+}
+
+#logo p {
+  margin: 10px;
+}
+
+#logo a {
+  text-decoration: none;
 }
 
 #content {
-  background: #2E2E2E;
+  background: #ACC4C5;
   color: white;
-  height: 720px;
+  height: 640px;
+  padding-top: 80px;
 }
 
 footer {
@@ -88,4 +98,3 @@ footer {
 #alert {
   color: red;
 }
-
