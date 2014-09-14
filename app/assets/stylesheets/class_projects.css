@@ -1,0 +1,24 @@
+#featured:before, #featured:after, #index:before, #index:after {
+  content: " ";
+  display: table;
+}
+
+#featured:after, #index:after {
+  clear: both;
+}
+
+#featured {
+  float: left;
+  width: 655px;
+}
+
+#featured img {
+  width: 320px;
+  height: 190px;
+}
+
+#index {
+  float: right;
+  width: 655px;
+  margin-top: -320px
+}

@@ -5,6 +5,7 @@ class ClassProjectsController < ApplicationController
   # GET: index view for all projects
    def index
      @projects = ClassProject.all
+     @featured = ClassProject.is_featured.first
    end
    
    # GET: new view to input data for a new project

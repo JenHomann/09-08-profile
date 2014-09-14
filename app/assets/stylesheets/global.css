@@ -1,9 +1,9 @@
-header:before, header:after, footer:before, footer:after, #content:before, #content:after {
+header:before, header:after, footer:before, footer:after {
   content: " ";
   display: table;
 }
 
-header:after, footer:after, #content:before, #content:after {
+header:after, footer:after {
   clear: both;
 }
 

@@ -1,12 +1,20 @@
-<h1>Project Index</h1>
+<div id="featured">
+  <h1><%= @featured.name %></h1>
+    <p><%= image_tag(@featured.image)%></p>
+    <p><%= @featured.description %></p>
+    <p><%= link_to("View more", class_project_path(@featured.id))%>
+</div>
 
-<% @projects.each do |project| %>
-  <p><% if project.featured %>
-        *
-      <% end %>
-    <%= link_to(" #{project.name}", class_project_path(project.id)) %></p>
-<% end %>
+<div id="index">
+  <h1>My projects</h1>
+  <% @projects.each do |project| %>
+    <p><% if project.featured %>
+          *
+        <% end %>
+      <%= link_to(" #{project.name}", class_project_path(project.id)) %></p>
+  <% end %>
 
-<%= link_to("New project", new_class_project_path) %>
-
-<p><%= link_to("Home", root_path)%></p>
+  <% if current_user %>
+    <%= link_to("New project", new_class_project_path) %>
+  <% end %>
+</div>
