@@ -1,3 +1,62 @@
+header:before, header:after {
+  content: " ";
+  display: table;
+}
+
+header:after {
+  clear: both;
+}
+
+body {
+  background: #D7D7D7;
+  width: 100%;
+  height: 1000px;
+}
+
+#container {
+  background: #B6B6B6;
+  width: 1300px;
+  margin: 0 60px 0 60px;
+}
+
+header {
+  background: white;
+  width: 1300px;
+  height: 80px;
+  position: fixed;
+  z-index: 9999;
+}
+
+.top_nav {
+  float: left;
+  height: 80px;
+  width: 160px;
+}
+
+.top_nav p {
+  margin: 50px;
+}
+
+.top_nav a {
+  text-decoration: none;
+}
+
+#logo {
+  float: right;
+  font-size: 52px;
+  margin: 10px 100px 0 0;
+}
+
+#content {
+  background: #2E2E2E;
+  color: white;
+  height: 600px;
+}
+
+footer {
+  background: white;
+}
+
 #notice {
   color: green;
 }
@@ -5,3 +64,4 @@
 #alert {
   color: red;
 }
+

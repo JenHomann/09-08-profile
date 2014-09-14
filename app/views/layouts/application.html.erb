@@ -1,27 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Profile</title>
+  <title>jen.</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
+
 <body>
-
-<% if flash[:notice]%>
-  <p id="notice"><%= flash[:notice]%></p>
-  <% end %>
-<% if flash[:alert] %>
-  <p id="alert"><%= flash[:alert]%></p>
-<% end %>
+  <div id="container">
+    <header>
+      <div class="top_nav">
+        <p><%=link_to("portfolio", class_projects_path)%></p>
+      </div>
+      <div class="top_nav">
+        <p><%=link_to("articles", articles_path)%></p>
+      </div>
+      <div class="top_nav">
+        <p><%=link_to("about", "#")%></p>
+      </div>
+      <div id="logo">
+        jen
+      </div>
+    </header>
+    
+    <div id="content">
+      <% if flash[:notice]%>
+        <p id="notice"><%= flash[:notice]%></p>
+        <% end %>
+      <% if flash[:alert] %>
+        <p id="alert"><%= flash[:alert]%></p>
+      <% end %>
   
-<% if current_user %>
-  Logged in as <%= current_user.email %> <%= link_to("Log out", logout_path)%>
-<% else %>
-  NOT logged in! <%= link_to("Log in", logins_path)%>
-<% end %>
+      <% if current_user %>
+        Logged in as <%= current_user.email %> <%= link_to("Log out", logout_path)%>
+      <% else %>
+        NOT logged in! <%= link_to("Log in", logins_path)%>
+      <% end %>
 
-<%= yield %>
+      <%= yield %>
+    </div>
+    
+    <footer>
+      <%= link_to("Find me online", links_path)%>
+      <div class="social_link">
+        GitHub
+      </div>
+      <div class="social_link">
+        Twitter
+      </div>
+      <div class="social_link">
+        Facebook
+      </div>
+      <div class="social_link">
+        LinkedIn
+      </div>
+      <div class="social_link">
+        Wordpress
+      </div>
+      <div id="contact_me">
+        <%= link_to("Contact me", new_contact_form_path)%>
+      </div>
+    </footer>
+    
+  </div>
 
 </body>
+
 </html>
+
