@@ -15,4 +15,17 @@
   float: right;
   width: 655px;
   margin-top: -120px;
+  margin-left: -60px;
+}
+
+#content p {
+  color: #7C7C7C;
+}
+
+#content h1 {
+  color: #7C7C7C;
+}
+
+#show {
+  margin: 60px 100px 0 100px;
 }

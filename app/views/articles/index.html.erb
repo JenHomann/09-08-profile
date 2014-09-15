@@ -1,16 +1,23 @@
-<div id="featured">
-  <h1><%= @most_recent.title %></h1>
-  <p><%= @most_recent.body %></p>
-</div>
-
-<div id="index">
-  <h1>More Articles</h1>
-  <% @articles.each do |article| %>
-    <p><%= link_to(" #{article.title}", article_path(article.id)) %><br>
-        <%= article.excerpt %> ... <%= link_to("[more]", article_path(article.id)) %></p>
-  <% end %>
+<table>
+  <tr>
+    <td>
+      <div id="featured">
+        <h1><%= @most_recent.title %></h1>
+        <p><%= @most_recent.body %></p>
+      </div>
+    </td>
+    <td>  
+      <div id="index">
+        <h1>More Articles</h1>
+        <% @articles.each do |article| %>
+          <p><%= link_to(" #{article.title}", article_path(article.id)) %><br>
+              <%= article.excerpt %> ... <%= link_to("[more]", article_path(article.id)) %></p>
+        <% end %>
   
-  <% if current_user %>
-    <%= link_to("New article", new_article_path)%>
-  <% end%>
-</div>
+        <% if current_user %>
+          <%= link_to("New article", new_article_path)%>
+        <% end%>
+      </div>
+    </td>
+  </tr>
+</table>

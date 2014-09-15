@@ -1,23 +1,26 @@
-<h1><%= @project.name %> Project</h1>
+<div class="show_left">
+  <h1><%= @project.name %> Project</h1>
 
-<% if @project.image != nil %>
-  <%= image_tag(@project.image)%>
-<% end%>
-<p><% if @project.featured %>
-      FEATURED PROJECT
-    <% end %></p>
-<p>(created in week <%= @project.week%>)</p>
-<% if @project.view_url != "" && @project.view_url != nil %>
-    <p><%= link_to("Check it out!", @project.view_url)%></p>
-  <% end %>
+  <% if @project.image != nil %>
+    <%= image_tag(@project.image)%>
+  <% end%>
+</div>
+<div class="show_right">
+  <p><% if @project.featured %>
+        FEATURED PROJECT
+      <% end %></p>
+  <p>(created in week <%= @project.week%>)</p>
+  <% if @project.view_url != "" && @project.view_url != nil %>
+      <p><%= link_to("Check it out!", @project.view_url)%></p>
+    <% end %>
   
-  <% if @project.code_url != nil %>
-    <p><%= link_to("Check under the hood (i.e., view my code)", @project.code_url)%></p>
-  <% end %>
+    <% if @project.code_url != nil %>
+      <p><%= link_to("Check under the hood (i.e., view my code)", @project.code_url)%></p>
+    <% end %>
   
-<p>Project Description: <%= @project.description%></p>
+  <p>Project Description: <%= @project.description%></p>
 
-<%= link_to("Edit details", edit_class_project_path)%>
-<%= link_to("Full portfolio", class_projects_path)%>
-
-<p><%= link_to("Home", root_path)%></p>
+  <% if current_user %>
+    <%= link_to("Edit details", edit_class_project_path)%>
+  <% end %>
+</div>

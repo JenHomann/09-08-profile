@@ -9,8 +9,10 @@
 
 #featured {
   float: left;
-  width: 655px;
+  width: 455px;
+  height: 660px;
   color: #7C7C7C;
+  padding: 20px 100px 0 100px;
 }
 
 #featured img {
@@ -20,5 +22,36 @@
 
 #index {
   float: right;
-  width: 655px;
+  height: 660px;
+  width: 455px;
+  margin-top: 20px;
+  padding: 20px 0 0 100px;
+  color: #7C7C7C;
+}
+
+.show_left {
+  color: #7C7C7C;
+  float: left;
+  width: 555px;
+  margin: 50px 0 0 20px;
+}
+.show_left h1 {
+  text-align: center;
+  margin-left: 60px;
+}
+
+.show_right {
+  color: #7C7C7C;
+  float: right;
+  width: 455px;
+  margin-right: 100px;
+  padding-top: 120px;
+}
+
+.form p {
+  color: #7C7C7C;
+}
+
+.form h1 {
+  color: #7C7C7C;
 }

@@ -1,19 +1,19 @@
-<h1><%= @article.title %></h1>
-<p><% if @article.draft %>
-      DRAFT
-    <% end %></p>
-<p><% if @article.featured %>
-      FEATURED
-    <% end %></p>
+<div id="show">
+  <h1><%= @article.title %></h1>
+  <p><% if @article.draft %>
+        DRAFT
+      <% end %></p>
+  <p><% if @article.featured %>
+        FEATURED
+      <% end %></p>
 
-<p><%= link_to("Awesome", awesome_page_path)%>: <% if @awesomes != 0 || @awesomes != nil %>
-    <%= @awesomes %>
-    <% end %></p>
+  <p><%= link_to("Awesome", awesome_page_path)%>: <% if @awesomes != 0 || @awesomes != nil %>
+      <%= @awesomes %>
+      <% end %></p>
 
-<p><%= raw(@article.html_body) %></p>
+  <p><%= simple_format (@article.html_body) %></p>
 
-<%= link_to("Edit article", edit_article_path)%>
-<%= link_to("All articles", articles_path)%>
-<%= link_to("Full portfolio", class_projects_path)%>
-
-<p><%= link_to("Home", root_path)%></p>
+  <% if current_user %>
+    <%= link_to("Edit article", edit_article_path)%>
+  <% end %>
+</div>

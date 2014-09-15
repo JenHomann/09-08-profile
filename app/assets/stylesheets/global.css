@@ -15,10 +15,6 @@ body {
   color: #505050;
 }
 
-body {
-  color: #505050;
-}
-
 #container {
   background: #B6B6B6;
   width: 1300px;
@@ -66,10 +62,11 @@ header {
 #content {
   background: white;
   color: white;
-  height: 660px;
+  height: 2000px;
   padding-top: 80px;
   position: relative;
 }
+
 /* this is where the homescreen animation is saved*/
 #animation {
   position: fixed;
@@ -130,4 +127,5 @@ footer {
   width: 1100px;
   margin: 0 auto;
   padding-top: 40px;
+  color: #505050;
 }
