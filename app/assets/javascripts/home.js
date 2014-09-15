@@ -53,7 +53,7 @@ $(document).ready(function(){
   }
 
   $(window).scroll(function(){
-    var events = [fireA, fireA, fireA, fireA, fireA, fireB, fireB, fireB, fireB, fireB, fireC, fireC, fireC, fireC, fireC, fireD, fireD, fireD, fireD, fireD, fireE, fireE, fireE, fireE, fireE, fireF, fireF, fireF, fireF, fireF, fireG, fireG, fireG, fireG, fireG, fireG, fireH, fireH, fireH, fireH, fireH, fireI, fireI, fireI, fireI, fireI, fireI, fireJ, fireJ, fireJ, fireJ, fireJ, fireK, fireK, fireK, fireK, fireK, fireL, fireL, fireL, fireL, fireL, fireM];
+    var events = [fireA, fireA, fireB, fireB, fireC, fireC, fireD, fireD, fireE, fireE, fireF, fireF, fireG, fireG, fireH, fireH, fireI, fireI, fireJ, fireJ, fireK, fireK, fireK, fireK, fireK, fireL, fireL, fireL, fireL, fireL, fireM];
     
     if(!this.counter) { this.counter = 0; }
     
