@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>jen.</title>
+  <link href="//fonts.googleapis.com/css?family=Special+Elite:400" rel="stylesheet" type="text/css">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -21,7 +22,7 @@
         <p><%=link_to("about", about_path)%></p>
       </div>
       <div id="logo">
-        <p><%= link_to("jen", root_path)%></p>
+        <p><%= link_to("Jen", root_path)%></p>
       </div>
     </header>
     
@@ -54,12 +55,12 @@
       </div>
       <div id="contact_me">
         <p><%= link_to("Contact me", new_contact_form_path)%></p>
+        <% if current_user %>
+          <p>Logged in as <%= current_user.email %> <%= link_to("Log out", logout_path)%></p>
+        <% else %>
+          <p>NOT logged in! <%= link_to("Log in", logins_path)%></p>
+        <% end %>
       </div>
-      <% if current_user %>
-        Logged in as <%= current_user.email %> <%= link_to("Log out", logout_path)%>
-      <% else %>
-        NOT logged in! <%= link_to("Log in", logins_path)%>
-      <% end %>
     </footer>
     
   </div>

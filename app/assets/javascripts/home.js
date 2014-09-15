@@ -52,17 +52,13 @@ $(document).ready(function(){
     $('#animation').css("background", "url('/images/point_3.jpg')");
   }
 
-  function stop() {
-    $('#animation').css("background", "url('/images/start.jpg')");
-  }
-
   $(window).scroll(function(){
-    var events = [fireA, fireB, fireC, fireD, fireE, fireF, fireG, fireH, fireI, fireJ, fireK, fireL, fireM];
+    var events = [fireA, fireA, fireA, fireA, fireA, fireB, fireB, fireB, fireB, fireB, fireC, fireC, fireC, fireC, fireC, fireD, fireD, fireD, fireD, fireD, fireE, fireE, fireE, fireE, fireE, fireF, fireF, fireF, fireF, fireF, fireG, fireG, fireG, fireG, fireG, fireG, fireH, fireH, fireH, fireH, fireH, fireI, fireI, fireI, fireI, fireI, fireI, fireJ, fireJ, fireJ, fireJ, fireJ, fireK, fireK, fireK, fireK, fireK, fireL, fireL, fireL, fireL, fireL, fireM];
     
     if(!this.counter) { this.counter = 0; }
     
     events[this.counter]();
-    this.counter = (this.counter + 1);
+    this.counter++;
     
     // $('#animation').css("background", "url('/images/wave_1.jpg')");
   });
