@@ -67,20 +67,12 @@ header {
   position: relative;
 }
 
-/* this is where the homescreen animation is saved*/
 #animation {
   position: fixed;
   background: url("/images/start.jpg");
   height: 620px;
   width: 1300px;
 }
-
-/*#animation img {
-  height: 700px;
-  width: 1300px;
-  margin-top: -80px;
-  z-index: 1;
-}*/
 
 footer {
   background: white;
