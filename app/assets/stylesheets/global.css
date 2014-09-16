@@ -63,7 +63,7 @@ header {
 #content {
   background: white;
   color: white;
-  height: auto;
+  height: 640px;
   padding-top: 80px;
   position: relative;
 }
@@ -115,6 +115,13 @@ footer {
   text-decoration: none;
 }
 
+.hidden_login {
+  color: white;
+}
+
+.hidden_login a {
+  color: white;
+}
 #notice {
   color: green;
 }

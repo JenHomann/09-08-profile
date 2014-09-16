@@ -57,9 +57,9 @@
       <div id="contact_me">
         <p><%= link_to("Contact me", new_contact_form_path)%></p>
         <% if current_user %>
-          <p>Logged in as <%= current_user.email %> <%= link_to("Log out", logout_path)%></p>
+          <p class="hidden_login">Logged in as <%= current_user.email %> <%= link_to("Log out", logout_path)%></p>
         <% else %>
-          <p>NOT logged in! <%= link_to("Log in", logins_path)%></p>
+          <p class="hidden_login">NOT logged in! <%= link_to("Log in", logins_path)%></p>
         <% end %>
       </div>
     </footer>
