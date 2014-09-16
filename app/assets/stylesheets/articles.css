@@ -9,6 +9,7 @@
 #featured {
   float: left;
   width: 655px;
+  height: auto;
 }
 
 #index {
@@ -16,6 +17,7 @@
   width: 655px;
   margin-top: -120px;
   margin-left: -60px;
+  height: auto;
 }
 
 #content p {
