@@ -11,7 +11,7 @@ body {
   background: #D7D7D7;
   width: 100%;
   height: 2000px;
-  font-family: Special Elite;
+  font-family: Open Sans;
   color: #505050;
 }
 
@@ -34,6 +34,7 @@ header {
   float: left;
   height: 80px;
   width: 160px;
+  font-family: Special Elite;
 }
 
 .top_nav p {
@@ -47,8 +48,9 @@ header {
 #logo {
   float: right;
   font-size: 52px;
-  margin: 10px 100px 0 0;
+  margin: 15px 100px 0 0;
   height: 80px;
+  font-family: Special Elite;
 }
 
 #logo p {
@@ -82,6 +84,7 @@ footer {
   z-index: 8888;
   top: 700px;
   border-top: 2px solid #505050;
+  font-family: Special Elite;
 }
 
 .social_link {
