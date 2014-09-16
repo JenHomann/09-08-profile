@@ -11,7 +11,7 @@
       <%= @awesomes %>
       <% end %></p>
 
-  <p><%= simple_format (@article.html_body) %></p>
+  <p><%= simple_format(@article.html_body) %></p>
 
   <% if current_user %>
     <%= link_to("Edit article", edit_article_path)%>
