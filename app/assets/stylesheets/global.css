@@ -10,7 +10,6 @@ header:after, footer:after {
 body {
   background: #D7D7D7;
   width: 100%;
-  height: 2000px;
   font-family: Open Sans;
   color: #505050;
 }
@@ -64,7 +63,7 @@ header {
 #content {
   background: white;
   color: white;
-  height: 2000px;
+  height: 640px;
   padding-top: 80px;
   position: relative;
 }
@@ -88,7 +87,7 @@ footer {
   width: 1300px;
   position: fixed;
   z-index: 8888;
-  top: 700px;
+  top: 720px;
   border-top: 2px solid #505050;
   font-family: Special Elite;
 }
