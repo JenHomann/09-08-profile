@@ -3,7 +3,7 @@
     <td>
       <div id="featured">
         <h1><%= @most_recent.title %></h1>
-        <p><%= @most_recent.body %></p>
+        <p><%= simple_format(@most_recent.body) %></p>
       </div>
     </td>
     <td>  
