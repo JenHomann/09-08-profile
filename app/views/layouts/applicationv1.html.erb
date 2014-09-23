@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jen Homann</title>
+  <link rel="shortcut icon" href="/images/specialicon.ico" type="image/x-icon" />
+  <link href="//fonts.googleapis.com/css?family=Special+Elite:400" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+
+<body>
+  <div id="container">
+    <header>
+      <div class="top_nav">
+        <p><%=link_to("portfolio", class_projects_path)%></p>
+      </div>
+      <div class="top_nav">
+        <p><%=link_to("articles", articles_path)%></p>
+      </div>
+      <div class="top_nav">
+        <p><%=link_to("about", about_path)%></p>
+      </div>
+      <div id="logo">
+        <p><%= link_to("Jen Homann", root_path)%></p>
+      </div>
+    </header>
+    
+    <div id="content">
+      <% if flash[:notice]%>
+        <p id="notice"><%= flash[:notice]%></p>
+        <% end %>
+      <% if flash[:alert] %>
+        <p id="alert"><%= flash[:alert]%></p>
+      <% end %>
+
+      <%= yield %>
+    </div>
+    
+    <footer>
+      <div class="social_link">
+        <p><%= link_to("GitHub", "https://github.com/JenHomann")%></p>
+      </div>
+      <div class="social_link">
+        <p><%= link_to("Twitter", "http://twitter.com/mpjeno")%></p>
+      </div>
+      <div class="social_link">
+        <p><%= link_to("Wordpress", "http://jenhomann.com")%></p>
+      </div>
+      <div class="social_link">
+        <p><%= link_to("Facebook", "http://www.facebook.com/jenhomann")%></p>
+      </div>
+      <div class="social_link">
+        <p><%= link_to("LinkedIn", "http://www.linkedin.com/in/jenhomann")%></p>
+      </div>
+      <div id="contact_me">
+        <p><%= link_to("Contact me", new_contact_form_path)%></p>
+        <% if current_user %>
+          <p class="hidden_login">Logged in as <%= current_user.email %> <%= link_to("Log out", logout_path)%></p>
+        <% else %>
+          <p class="hidden_login">NOT logged in! <%= link_to("Log in", logins_path)%></p>
+        <% end %>
+      </div>
+    </footer>
+    
+  </div>
+
+</body>
+
+</html>

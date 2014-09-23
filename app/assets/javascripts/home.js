@@ -1,16 +1,16 @@
-$(document).ready(function(){
-  
-  $(function() {
-
-      $('#animation img:gt(0)').hide(); // to hide all but the first image when page loads
-
-      setInterval(function()
-      {
-          $('#animation :first-child').fadeOut(1)
-              .next().fadeIn(1).end().appendTo('#animation');
-      },100);
-  });
-  
+// $(document).ready(function(){
+//
+//   $(function() {
+//
+//       $('#animation img:gt(0)').hide(); // to hide all but the first image when page loads
+//
+//       setInterval(function()
+//       {
+//           $('#animation :first-child').fadeOut(1)
+//               .next().fadeIn(1).end().appendTo('#animation');
+//       },100);
+//   });
+//
   
  //  function fireA() {
  //    $('#animation').css("background", "url('/images/wave_1.jpg')");
@@ -74,4 +74,4 @@ $(document).ready(function(){
  //
  //  });
 
-})
+// })

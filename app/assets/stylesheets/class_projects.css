@@ -1,4 +1,4 @@
-#featured:before, #featured:after, #index:before, #index:after {
+/*#featured:before, #featured:after, #index:before, #index:after {
   content: " ";
   display: table;
 }
@@ -54,4 +54,4 @@
 
 .form h1 {
   color: #7C7C7C;
-}
+}*/
