@@ -1,4 +1,4 @@
-header:before, header:after, footer:before, footer:after {
+/*header:before, header:after, footer:before, footer:after {
   content: " ";
   display: table;
 }
@@ -135,4 +135,4 @@ footer {
   margin: 0 auto;
   padding-top: 40px;
   color: #505050;
-}
+}*/
