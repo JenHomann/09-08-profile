@@ -19,7 +19,11 @@ header {
   border-top: 1px solid #B56C63;
 }
   
-  #logo {
+  #logo a {
+    color: #E4D4E6;
+    text-decoration: none;
+    font-size: 60px;
+    margin-left: 60px;
 
   }
   
@@ -56,12 +60,17 @@ header {
   margin: 50px 0 50px 0;
 }
 
-.home-copy {
-  height: 400px;
-  width: 70%;
+.l-home-copy {
+  height: auto;
+  width: 80%;
   margin: 0 auto;
   clear: both;
+  text-align: justify;
 }
+
+  .l-home-copy h1 {
+    text-align: right;
+  }
 
 .box1 {
   @extend .highlight_box;
@@ -83,4 +92,10 @@ header {
 
 footer {
   clear:both;
+  height: 80px;
+  border-top: 2px solid #2E393F;
+  background: #5A6E79;
+  color: white;
+  text-align: center;
+  padding-top: 40px;
 }

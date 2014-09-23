@@ -35,13 +35,19 @@
     </header>
     
     <div id="content">
+      <% if flash[:notice]%>
+        <p id="notice"><%= flash[:notice]%></p>
+        <% end %>
+      <% if flash[:alert] %>
+        <p id="alert"><%= flash[:alert]%></p>
+      <% end %>
 
       <%= yield %>
 
     </div> <!-- this is the closing div for #content -->
     
     <footer>
-      This is the footer
+      © Jen Homann 2014
     </footer>
     
   </div> <!-- this is the closing div for container -->
