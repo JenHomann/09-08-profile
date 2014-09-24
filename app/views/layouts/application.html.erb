@@ -55,7 +55,29 @@
     </div>
     
     <footer>
-      © Jen Homann 2014
+      <div class="social_link">
+        <p><%= link_to("GitHub", "https://github.com/JenHomann")%></p>
+      </div>
+      <div class="social_link">
+        <p><%= link_to("Twitter", "http://twitter.com/mpjeno")%></p>
+      </div>
+      <div class="social_link">
+        <p><%= link_to("Wordpress", "http://jenhomann.com")%></p>
+      </div>
+      <div class="social_link">
+        <p><%= link_to("Facebook", "http://www.facebook.com/jenhomann")%></p>
+      </div>
+      <div class="social_link">
+        <p><%= link_to("LinkedIn", "http://www.linkedin.com/in/jenhomann")%></p>
+      </div>
+      <div id="contact_me">
+        <p><%= link_to("Contact me", new_contact_form_path)%></p>
+      </div>
+      <% if current_user %>
+        <p class="hidden_login">Logged in as <%= current_user.email %> <%= link_to("Log out", logout_path)%></p>
+      <% else %>
+        <p class="hidden_login">NOT logged in! <%= link_to("Log in", logins_path)%></p>
+      <% end %>
     </footer>
     
   </div> <!-- this is the closing div for container -->
