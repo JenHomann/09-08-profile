@@ -1,14 +1,5 @@
-///*header:before, header:after, footer:before, footer:after {
-//  content: " ";
-//  display: table;
-//}
-//
-//header:after, footer:after {
-//  clear: both;
-//}
-
 body {
-  font-family: Walter Turncoat;
+  font-family: Walter Turncoat, sans-serif;
 }
 %full_width_and_clear_both {
   width: 100%;
@@ -70,7 +61,6 @@ header {
     
 .arrow_border {
   @extend %full_width_and_clear_both;
-  z-index: 1;
 }
 
 #content {
