@@ -6,6 +6,10 @@
 //header:after, footer:after {
 //  clear: both;
 //}
+
+body {
+  font-family: Walter Turncoat;
+}
 %full_width_and_clear_both {
   width: 100%;
   clear: both;
@@ -31,34 +35,42 @@ header {
 }
   
   #logo a {
-    color: #E4D4E6;
+    color: white;
     text-decoration: none;
     font-size: 60px;
     margin-left: 60px;
-
+  }
+  
+  #logo p {
+    padding-top: 30px;
   }
   
   #top_nav_container {
     float: right;
     height: 150px;
     width: 606px;
-    margin-right: 40px;
   }
 
     .l-top_nav {
       float: left;
       margin-top: 22px;
-      border: 1px dashed black;
       height: 100px;
       width: 200px;
     }
     
     .l-top_nav a {
       text-decoration: none;
+      color: white;
+    }
+    
+    .l-top_nav p {
+      padding-top: 20px;
+      font-size: 20px;
     }
     
 .arrow_border {
   @extend %full_width_and_clear_both;
+  z-index: 1;
 }
 
 #content {
@@ -69,14 +81,14 @@ header {
   height: 340px;
   width: 55%;
   float: left;
-  margin: 60px 60px 60px 100px;
+  margin: 20px 60px 60px 100px;
   text-align: justify;
 }
 
 #vector_jen {
   height: 400px;
   float: right;
-  margin: 60px 100px 0 20px;
+  margin: 40px 100px 0 20px;
 }
 
 .home_section_1 {
@@ -85,14 +97,15 @@ header {
 
 .home_section_2 {
   @include home_section_background(#134A84);
-  padding-left: 15px;
+  padding-left: 60px;
+  padding-bottom: 40px;
 }
 
 .web_copy_video {
-  height: 220px;
+  height: 300px;
   float: left;
-  padding: 80px 60px 0 60px;
-  margin: 60px 60px -20px 60px;
+  padding: 20px 60px 0 60px;
+  margin: 60px 60px -60px 60px;
   text-align: center;
   background: white;
   border-radius: 10px;
