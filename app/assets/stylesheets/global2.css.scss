@@ -6,17 +6,28 @@
 //header:after, footer:after {
 //  clear: both;
 //}
+%full_width_and_clear_both {
+  width: 100%;
+  clear: both;
+}
+
+@mixin home_section_background($color) {
+  height: 400px;
+  background: $color;
+  @extend %full_width_and_clear_both;
+  color: #134A84;
+}
 
 #container {
   width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 header {
   width: 100%;
   height: 150px;
-  background: #B56C63;
-  border-bottom: 2px solid #414342;
-  border-top: 1px solid #B56C63;
+  background: #2B7EB5;
 }
   
   #logo a {
@@ -45,57 +56,50 @@ header {
     .l-top_nav a {
       text-decoration: none;
     }
+    
+.arrow_border {
+  @extend %full_width_and_clear_both;
+}
 
 #content {
-  clear: both;
-  height: auto;
-  width: 100%;
+  @extend %full_width_and_clear_both;
 }
 
-.highlight_box {
-  width: 90%;
-  height: 480px;
-  background: #CFD1C6;
-  border: 2px solid #414342;
-  margin: 50px 0 50px 0;
-}
-
-.l-home-copy {
-  height: auto;
-  width: 80%;
-  margin: 0 auto;
-  clear: both;
+#about_copy {
+  height: 340px;
+  width: 55%;
+  float: left;
+  margin: 60px 60px 60px 100px;
   text-align: justify;
 }
 
-  .l-home-copy h1 {
-    text-align: right;
-  }
-
-.box1 {
-  @extend .highlight_box;
+#vector_jen {
+  height: 400px;
   float: right;
-  border-right: none;
+  margin: 60px 100px 0 20px;
 }
 
-.box2 {
-  @extend .highlight_box;
-  border-left: none;
+.home_section_1 {
+  @include home_section_background(white);
+}
+
+.home_section_2 {
+  @include home_section_background(#134A84);
+  padding-left: 15px;
+}
+
+.web_copy_video {
+  height: 220px;
   float: left;
-}
-
-.box3 {
-  @extend .highlight_box;
-  border-right: none;
-  float: right;
+  padding: 80px 60px 0 60px;
+  margin: 60px 60px -20px 60px;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
 }
 
 footer {
-  clear:both;
-  height: 80px;
-  border-top: 2px solid #2E393F;
-  background: #5A6E79;
-  color: white;
-  text-align: center;
-  padding-top: 40px;
+  @extend header;
+  @extend %full_width_and_clear_both;
+  margin-top: -5px;
 }
