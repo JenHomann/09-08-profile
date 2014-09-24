@@ -1,0 +1,70 @@
+//$font1: "Helvetica", sans-serif;
+//$font2: "Trebuchet", sans-serif;
+//
+//$blue: #3134AC;
+//$darkest-grey: #363636;
+//$dark-grey: #696969;
+//$light-grey: #A3A3A3;
+//$lighter-grey: #C1C1C1;
+//$lightest-grey: #DCDCDC;
+//$white: #ffffff;
+//
+//a {
+//  text-decoration: none;
+//  color: $dark-grey;
+//  @extend .slow_hover;
+//}
+//
+//// uppercases a font and sets it to font1
+//.uppercased_font_1 {
+//  text-transform: uppercase;
+//  font-family: $font1;
+//}
+//
+////When the mouse moves over elements, ease into transition in 1/2 second
+//.slow_hover {
+//  -webkit-transition: all 500ms ease;
+//  -moz-transition: all 500ms ease;
+//  -ms-transition: all 500ms ease;
+//  -o-transition: all 500ms ease;
+//  transition: all 500ms ease;
+//}
+//
+//// font2 italic
+//.italicized_font_2 {
+//  font-family: $font2;
+//  font-style: italic;
+//}
+//
+//// adds extra space between multiple lines in text
+//.extra-line_height {
+//  line-height: 1.7;
+//}
+//
+//// essentially moves list items into a set of columns
+//.column_list_item {
+//  float: left;
+//  list-style: none; // removes bullet from list item
+//}
+//
+//.nav-li {
+//  display: inline-block;
+//  @extend .column_list_item;
+//}
+//
+//.nav-item {
+//  @extend .uppercased_font_1;
+//  background: $lighter-grey;
+//  font-size: 12px;
+//}
+//
+//.nav-item:hover {
+//  color: $blue;
+//  background: $lightest-grey;
+//}
+//
+////when a nav item is within a div called l-nav, i'd like it to look like this
+//.l-nav .nav-item {
+//  padding: 30px 8px;
+//  display: block;
+//}
